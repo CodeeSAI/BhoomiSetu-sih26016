@@ -1,0 +1,538 @@
+@import "tailwindcss";
+
+/* ============================================================
+   BhoomiSetu — Unified GovTech Visual Design System Tokens
+   National Land Acquisition & Management Intelligence Platform
+   ============================================================ */
+
+@theme {
+  /* Primary Palettes: Deep Navy, Royal Blue, Electric Blue */
+  --color-navy: #0B1528;
+  --color-navy-dark: #070E1B;
+  --color-navy-light: #13223D;
+  --color-royal: #1D4ED8;
+  --color-electric: #2563EB;
+  
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93bbfc;
+  --color-primary-400: #5b93f8;
+  --color-primary-500: #3672f2;
+  --color-primary-600: #2057e6;
+  --color-primary-700: #1a45d3;
+  --color-primary-800: #1c39ab;
+  --color-primary-900: #1c3387;
+  --color-primary-950: #0B1528;
+
+  /* Secondary: Teal, Emerald, Cyan */
+  --color-teal: #0D9488;
+  --color-teal-light: #CCFBF1;
+  --color-emerald: #059669;
+  --color-emerald-light: #D1FAE5;
+  --color-cyan: #0891B2;
+  --color-cyan-light: #CFFAFE;
+
+  /* Accents: Violet, Indigo, Amber, Coral, Rose */
+  --color-violet: #7C3AED;
+  --color-violet-light: #EDE9FE;
+  --color-indigo: #4F46E5;
+  --color-indigo-light: #EEF2FF;
+  --color-amber: #D97706;
+  --color-amber-light: #FEF3C7;
+  --color-coral: #EA580C;
+  --color-coral-light: #FFEDD5;
+  --color-rose: #E11D48;
+  --color-rose-light: #FFE4E6;
+
+  /* National Saffron & Ashoka Green Identity */
+  --color-saffron: #E8721E;
+  --color-saffron-light: #F4A040;
+  --color-ashoka: #046A38;
+  --color-ashoka-light: #0D8A4E;
+
+  /* Neutrals: Cool White, Mist Gray, Slate, Deep Navy */
+  --color-surface-50: #F8FAFC;
+  --color-surface-100: #F1F5F9;
+  --color-surface-200: #E2E8F0;
+  --color-surface-300: #CBD5E1;
+  --color-surface-400: #94A3B8;
+  --color-surface-500: #64748B;
+  --color-surface-600: #475569;
+  --color-surface-700: #334155;
+  --color-surface-800: #1E293B;
+  --color-surface-900: #0F172A;
+  --color-surface-950: #060A13;
+
+  /* Typography */
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+/* ============================================================
+   Root Semantic Custom Properties
+   ============================================================ */
+:root {
+  --primary: #2563EB;
+  --primary-hover: #1D4ED8;
+  --success: #059669;
+  --warning: #D97706;
+  --critical: #E11D48;
+  --info: #0284C7;
+  --intelligence: #7C3AED;
+  --gis: #0891B2;
+  --governance: #4F46E5;
+  
+  --surface: #FFFFFF;
+  --surface-glass: rgba(255, 255, 255, 0.82);
+  --surface-elevated: rgba(255, 255, 255, 0.94);
+  --border: rgba(226, 232, 240, 0.85);
+  --border-glass: rgba(255, 255, 255, 0.7);
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #F8FAFC;
+  background-image:
+    radial-gradient(at 15% 15%, rgba(37, 99, 235, 0.05) 0px, transparent 45%),
+    radial-gradient(at 85% 10%, rgba(14, 165, 233, 0.05) 0px, transparent 40%),
+    radial-gradient(at 50% 90%, rgba(124, 58, 237, 0.03) 0px, transparent 50%),
+    radial-gradient(at 90% 85%, rgba(5, 150, 105, 0.04) 0px, transparent 40%);
+  background-attachment: fixed;
+  color: var(--color-surface-900);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.55);
+}
+
+/* ============================================================
+   Unified Multi-Strength Glassmorphism System
+   ============================================================ */
+
+/* 1. Subtle Glass (Toolbars, filters, soft elements) */
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.02);
+}
+
+/* 2. Medium Glass Panel (Default container for cards, panels) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border-radius: 0.875rem;
+  position: relative;
+}
+
+/* 3. Elevated Interactive Glass Card (Hover states, lifted cards) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 2px 12px -1px rgba(15, 23, 42, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border-radius: 0.875rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(147, 187, 252, 0.85);
+  box-shadow: 0 10px 28px -4px rgba(15, 23, 42, 0.09), 0 2px 8px -1px rgba(37, 99, 235, 0.06);
+  transform: translateY(-2px);
+}
+
+/* 4. Frosted Command Navigation Bar */
+.glass-header {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 1px 6px rgba(15, 23, 42, 0.03);
+}
+
+/* 5. Deep Navy Command Sidebar */
+.glass-sidebar {
+  background: rgba(11, 21, 40, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 4px 0 32px -4px rgba(0, 0, 0, 0.35);
+}
+
+/* 6. High-Contrast Frosted Input Fields */
+.glass-input {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  color: var(--color-surface-900);
+  border-radius: 0.625rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+  outline: none;
+}
+
+/* 7. Readable Frosted Table Container */
+.glass-table-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 0.875rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+}
+
+.glass-table-header {
+  background: rgba(248, 250, 252, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* 8. Frosted Metric / KPI Card */
+.glass-kpi {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 0.875rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-kpi:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+}
+
+/* 9. Layered Modal Dialog */
+.glass-modal {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 1.125rem;
+}
+
+/* 10. Slide-In Glass Drawer */
+.glass-drawer {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-left: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: -10px 0 36px rgba(15, 23, 42, 0.12);
+}
+
+/* 11. Secondary Glass Action Button */
+.glass-button-secondary {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  color: var(--color-surface-700);
+  transition: all 0.18s ease-in-out;
+}
+
+.glass-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--color-surface-900);
+  border-color: rgba(148, 163, 184, 0.95);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+/* 12. Floating Glass Toolbar */
+.glass-toolbar {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+/* 13. Glass Badges */
+.glass-badge {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* ============================================================
+   Consistent Button System (Section 21)
+   ============================================================ */
+.btn-primary {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 8px -1px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%);
+  box-shadow: 0 4px 14px -1px rgba(37, 99, 235, 0.45);
+  transform: translateY(-1px);
+}
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  color: #334155;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.btn-secondary:hover:not(:disabled) {
+  background: #FFFFFF;
+  border-color: #94A3B8;
+  color: #0F172A;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 8px -1px rgba(5, 150, 105, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-success:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857 0%, #065F46 100%);
+  transform: translateY(-1px);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 8px -1px rgba(217, 119, 6, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-warning:hover:not(:disabled) {
+  background: linear-gradient(135deg, #B45309 0%, #92400E 100%);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 8px -1px rgba(225, 29, 72, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #BE123C 0%, #9F1239 100%);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   Semantic Status Badge Styles (Section 8)
+   ============================================================ */
+.status-badge-emerald {
+  background-color: rgba(5, 150, 105, 0.12);
+  color: #047857;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+.status-badge-teal {
+  background-color: rgba(13, 148, 136, 0.12);
+  color: #0F766E;
+  border: 1px solid rgba(13, 148, 136, 0.25);
+}
+.status-badge-violet {
+  background-color: rgba(124, 58, 237, 0.12);
+  color: #6D28D9;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+.status-badge-indigo {
+  background-color: rgba(79, 70, 229, 0.12);
+  color: #4338CA;
+  border: 1px solid rgba(79, 70, 229, 0.25);
+}
+.status-badge-amber {
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #B45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+.status-badge-coral {
+  background-color: rgba(234, 88, 12, 0.12);
+  color: #C2410C;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+.status-badge-rose {
+  background-color: rgba(225, 29, 72, 0.12);
+  color: #BE123C;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+.status-badge-blue {
+  background-color: rgba(37, 99, 235, 0.12);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+.status-badge-cyan {
+  background-color: rgba(8, 145, 178, 0.12);
+  color: #0E7490;
+  border: 1px solid rgba(8, 145, 178, 0.25);
+}
+
+/* Semantic Status Aliases per Section 8 */
+.status-badge-completed,
+.status-badge-acquired {
+  background-color: rgba(5, 150, 105, 0.12);
+  color: #047857;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+.status-badge-on-track {
+  background-color: rgba(13, 148, 136, 0.12);
+  color: #0F766E;
+  border: 1px solid rgba(13, 148, 136, 0.25);
+}
+.status-badge-pending {
+  background-color: rgba(124, 58, 237, 0.12);
+  color: #6D28D9;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+.status-badge-under-review {
+  background-color: rgba(79, 70, 229, 0.12);
+  color: #4338CA;
+  border: 1px solid rgba(79, 70, 229, 0.25);
+}
+.status-badge-delayed {
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #B45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+.status-badge-critical {
+  background-color: rgba(234, 88, 12, 0.12);
+  color: #C2410C;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+.status-badge-disputed {
+  background-color: rgba(225, 29, 72, 0.12);
+  color: #BE123C;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+.status-badge-proposed {
+  background-color: rgba(37, 99, 235, 0.12);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+.status-badge-notified {
+  background-color: rgba(8, 145, 178, 0.12);
+  color: #0E7490;
+  border: 1px solid rgba(8, 145, 178, 0.25);
+}
+
+/* ============================================================
+   Leaflet Map Overrides — Crisp tiles without blur distortion
+   ============================================================ */
+.leaflet-container {
+  font-family: var(--font-body) !important;
+  border-radius: 14px;
+}
+.leaflet-control-container .leaflet-bar {
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+.leaflet-control-container .leaflet-bar a {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+  color: #1E293B !important;
+}
+
+/* ============================================================
+   Accessibility & GIGW 3.0 Tokens
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-electric);
+  outline-offset: 2px;
+}
+
+html.text-scale-large {
+  font-size: 110%;
+}
+html.text-scale-xlarge {
+  font-size: 125%;
+}
+html.theme-high-contrast {
+  filter: contrast(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
