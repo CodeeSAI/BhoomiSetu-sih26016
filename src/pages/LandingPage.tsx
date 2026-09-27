@@ -64,11 +64,6 @@ export default function LandingPage() {
       {/* Hero Section */}
       <main className="flex-1 flex flex-col justify-center max-w-7xl mx-auto px-4 lg:px-8 py-12 lg:py-16 w-full">
         <div className="text-center max-w-3xl mx-auto space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-50 border border-primary-200 text-xs font-medium text-primary-800 shadow-sm">
-            <span className="flex h-2 w-2 rounded-full bg-primary-600 animate-ping" />
-            Smart India Hackathon 2024–2026 • Problem Statement SIH26016
-          </div>
-
           <h1 className="text-3xl sm:text-5xl font-black text-navy tracking-tight leading-tight">
             Unified National Land Acquisition & Management Platform
           </h1>
