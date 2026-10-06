@@ -1,122 +1,86 @@
 <div align="center">
-
-# 🏛️ BHOOMISETU
-
-### National Land Acquisition & Management Intelligence Platform
-
-**Land • People • Compensation • Rehabilitation • Infrastructure**
-
-[🚀 Live Demo](https://bhoomi-setu-sih26016.vercel.app/) · **SIH 2026 · SIH26016**
-
+# nn BHOOMISETU
+### **National Land Acquisition & Management Intelligence Platform**
+**LAND • PEOPLE • COMPENSATION • REHABILITATION • INFRASTRUCTURE**
+### n [LIVE DEMO](https://bhoomi-setu-sih26016.vercel.app/)
+**SIH 2026 · SIH26016**
 </div>
-
 ---
-
-## 🎯 About
-
-**BhoomiSetu** is a unified digital platform for managing the complete land acquisition lifecycle from a single operational dashboard.
-
-**Land → GIS → Projects → Approvals → Compensation → R&R → Monitoring**
-
+## n THE IDEA
+> **One connected platform for the complete land acquisition lifecycle.**
+BhoomiSetu brings **land records, GIS, projects, statutory workflows, compensation, affected families and rehabilitation** into o
+**LAND → GIS → PROJECTS → APPROVALS → COMPENSATION → R&R → MONITORING**
 ---
-
-## ✨ Key Features
-
-| 🧩 Module | ⚡ Capability |
+## n WHY BHOOMISETU?
+Land acquisition is not just a land-record problem.
+It involves **people, projects, approvals, money, timelines and rehabilitation**.
+BhoomiSetu connects them:
+**LAND + PROJECTS + GIS + PEOPLE + FINANCE + R&R + GOVERNANCE**
+---
+## n CORE PLATFORM
+| MODULE | PURPOSE |
 |---|---|
-| 📊 **Command Center** | National-level project and acquisition overview |
-| 🗺️ **GIS & ULPIN** | Parcel visualization and acquisition status |
-| 👨‍👩‍👧 **Families Registry** | Affected-family and R&R tracking |
-| 🔄 **Workflow Governance** | Statutory stages and approvals |
-| 💰 **Compensation** | Compensation assessment and disbursement tracking |
-| 📈 **Analytics** | Project, land and workflow insights |
-| 🔐 **Role-Based Access** | Controlled administrative workflows |
-
+| n **COMMAND CENTER** | National-level project & acquisition intelligence |
+| nn **GIS + ULPIN** | Parcel visualization and acquisition status |
+| nnnnn **FAMILIES** | Affected-family and R&R tracking |
+| n **WORKFLOW** | Statutory stages and approval governance |
+| n **COMPENSATION** | Assessment, approval and disbursement visibility |
+| n **ANALYTICS** | Progress, bottlenecks and project insights |
+| n **GOVERNANCE** | Role-oriented operational access |
 ---
-
-# 🖥️ Platform
-
-### 🔐 Secure Portal
-
+# n PLATFORM PREVIEW
+### n SECURE PORTAL
 ![BhoomiSetu Login](docs/screenshots/login.png)
-
-### 📊 National Command Center
-
+### n NATIONAL COMMAND CENTER
 ![Command Center](docs/screenshots/command-center.png)
-
-### 🗺️ GIS & ULPIN
-
+### nn GIS & ULPIN
 ![GIS](docs/screenshots/gis.png)
-
-### 👨‍👩‍👧 Affected Families
-
+### nnnnn AFFECTED FAMILIES
 ![Affected Families](docs/screenshots/families.png)
-
-### 🔄 Statutory Workflow
-
+### n STATUTORY WORKFLOW
 ![Workflow](docs/screenshots/workflow.png)
-
 ---
-
-## 🔄 Acquisition Lifecycle
-
-**Project Initiation**  
-↓  
-**Land Identification & GIS Verification**  
-↓  
-**Digital Scrutiny & Field Verification**  
-↓  
-**Statutory Approvals & Notifications**  
-↓  
-**Objection / Hearing**  
-↓  
-**Declaration & Award**  
-↓  
-**Compensation**  
-↓  
-**Rehabilitation & Resettlement**  
-↓  
-**Possession & Monitoring**
-
+## n ACQUISITION LIFECYCLE
+**01** Project Initiation
+↓
+**02** Land Identification + GIS / ULPIN Verification
+↓
+**03** Digital Scrutiny + Field Verification
+↓
+**04** Statutory Approvals + Notifications
+↓
+**05** Objection / Hearing
+↓
+**06** Declaration + Award
+↓
+**07** Compensation
+↓
+**08** Rehabilitation & Resettlement
+↓
+**09** Possession + Monitoring
 ---
-
-## 🧠 Why BhoomiSetu?
-
-Land acquisition involves **land records, government departments, approvals, finances and affected families**.
-
-BhoomiSetu connects them into one operational platform:
-
-> **LAND + PROJECTS + GIS + PEOPLE + FINANCE + R&R + GOVERNANCE**
-
+## n TECHNOLOGY
+**React** · **TypeScript** · **Vite** · **Responsive UI** · **GIS Visualization** · **Dashboard Analytics**
 ---
-
-## 🛠️ Technology
-
-**React · TypeScript · Vite · Responsive UI · GIS Visualization · Dashboard Analytics**
-
----
-
-## 🚀 Run Locally
-
+## n RUN LOCALLY
 ```bash
 git clone https://github.com/CodeeSAI/BhoomiSetu-sih26016.git
 cd BhoomiSetu-sih26016
 npm install
 npm run dev
-
-🌐 Live Demo
-🚀 Launch BhoomiSetu
-Demo environment: Uses synthetic data for demonstration purposes.
-Not an official government production system.
-
-🏆 Smart India Hackathon 2026
-Problem Statement: SIH26016 — Land Acquisition Management
-BhoomiSetu
-From fragmented processes to connected governance.
-<div align="center">
-
-🏛️ BHOOMISETU
-Connecting Land • People • Compensation • Rehabilitation
-SIH 2026 · SIH26016
-</div>
 ```
+---
+## n LIVE
+### n [Launch BhoomiSetu →](https://bhoomi-setu-sih26016.vercel.app/)
+**Demo Environment · Synthetic Data**
+> Prototype created for Smart India Hackathon 2026.
+> Not an official government production system.
+---
+<div align="center">
+# n SIH 2026
+### **SIH26016 · LAND ACQUISITION MANAGEMENT**
+## **From fragmented processes**
+## **to connected governance.**
+**nn BHOOMISETU**
+*Connecting Land • People • Compensation • Rehabilitation*
+</div>
